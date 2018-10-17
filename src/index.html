@@ -1,0 +1,125 @@
+<!doctype html>
+<html class="no-js" lang="en">
+
+<head>
+  <meta charset="utf-8">
+  <meta http-equiv="x-ua-compatible" content="ie=edge">
+  <title>Survey Form</title>
+  <meta name="description" content="FCC - Responsive Web Design Projects - Build a Survey Form">
+  <meta name="author" content="Ross Correia">
+  <meta name="keywords" content="FCC, FreeCodeCamp, Reponsive, Survey, Form">
+  <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+
+  <!-- <link rel="manifest" href="site.webmanifest"> -->
+  <link rel="apple-touch-icon" href="icon.png">
+  <link href="https://fonts.googleapis.com/css?family=Roboto|Rock+Salt" rel="stylesheet">
+
+  <!-- Place favicon.ico in the root directory -->
+</head>
+
+<body>
+  <!--[if lte IE 9]>
+    <p class="browserupgrade">You are using an <strong>outdated</strong> browser. Please <a href="https://browsehappy.com/">upgrade your browser</a> to improve your experience and security.</p>
+  <![endif]-->
+
+
+  <main>
+    <section id=form class="form-wrapper">
+      <header class="header">
+        <h1 id="title" class="title">Survey</h1>
+        <p id="description" class="description">Please let us know your level
+          of satisfaction and
+          how we can improve in the future.</p>
+      </header>
+      <form id="survey-form" class="survey-form" action="">
+        <div class="input-wrapper name">
+          <label id="name-label" for="name">Name</label><br>
+          <input id="name" type="text" name="name" placeholder="Enter your first name"
+            required>
+        </div>
+        <div class="input-group">
+          <div class="input-wrapper email">
+            <label id="email-label" for="email">Email</label><br>
+            <input id="email" type="email" name="email" placeholder="Enter your email"
+              required>
+          </div>
+          <div class="input-wrapper age">
+            <label id="number-label" for="number">Age</label><br>
+            <input id="number" type="number" min="1" max="110" name="age"
+              placeholder="Enter your age" required>
+          </div>
+        </div>
+        <div class="control-wrapper">
+          <p class="question">Which option best describes your current role?</p>
+          <select id="dropdown" class="dropdown" name="role" required>
+            <option value="">Homemaker</option>
+            <option value="">Professional</option>
+            <option value="">Retired</option>
+            <option value="">Self-Employed</option>
+            <option value="">Student</option>
+            <option value="">Trades</option>
+            <option value="">Uemployed</option>
+          </select>
+        </div>
+        <div class="control-wrapper">
+          <p class="question">Which option best describes your level of
+            satisfaction?</p>
+          <label class="radio ml-0">1
+            <input type="radio" name="group1" value="1" required>
+            <span class="circle"></span>
+          </label>
+          <label class="radio">2
+            <input type="radio" name="group1" value="2">
+            <span class="circle"></span>
+          </label>
+          <label class="radio">3
+            <input type="radio" name="group1" value="3">
+            <span class="circle"></span>
+          </label>
+          <label class="radio">4
+            <input type="radio" name="group1" value="4">
+            <span class="circle"></span>
+          </label>
+          <label class="radio">5
+            <input type="radio" name="group1" value="5">
+            <span class="circle"></span>
+          </label>
+        </div>
+        <div class="control-wrapper">
+          <p class="question">Areas that we can improve in the future?<br>(Check
+            all that
+            apply)</p>
+          <label class="checkbox">Attentiveness
+            <input type="checkbox" name="" value="One">
+            <span class="checkmark"></span>
+          </label class="checkbox">
+          <label class="checkbox">Communication
+            <input type="checkbox" name="" value="Two">
+            <span class="checkmark"></span>
+          </label class="checkbox">
+          <label class="checkbox">Product Knowledge
+            <input type="checkbox" name="" value="Three">
+            <span class="checkmark"></span>
+          </label>
+        </div>
+        <div class="input-wrapper">
+          <label id="name-label" for="comments">Comments</label><br>
+          <textarea id="comments" type="text" name="comments" required>
+        </div>
+        <div class="button">
+          <button id="submit" type="submit">Send</button>
+        </div>
+      </form>
+    </section>
+  </main>
+
+  <!-- Google Analytics: change UA-XXXXX-Y to be your site's ID. -->
+  <script>
+    window.ga = function () { ga.q.push(arguments) }; ga.q = []; ga.l = +new Date;
+    ga('create', 'UA-XXXXX-Y', 'auto'); ga('send', 'pageview')
+  </script>
+  <script src="https://www.google-analytics.com/analytics.js" async defer></script>
+  <!-- <script src="https://cdn.freecodecamp.org/testable-projects-fcc/v1/bundle.js"></script> -->
+</body>
+
+</html>
