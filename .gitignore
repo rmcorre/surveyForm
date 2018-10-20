@@ -54,5 +54,5 @@ font_awesome/
 
 # Dist #
 ########
-dist/
+# dist/
 

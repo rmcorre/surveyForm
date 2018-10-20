@@ -2,7 +2,7 @@ const path = require('path');
 const glob = require('glob-all');
 const webpack = require('webpack');
 const htmlWebpackPlugin = require('html-webpack-plugin');
-const modernizr = require('modernizr'); //eslint-disable-line
+// const modernizr = require('modernizr'); //eslint-disable-line
 const MiniCssExtractPlugin = require('mini-css-extract-plugin');
 const PurifyCSSPlugin = require('purifycss-webpack');
 const OptimizeCssAssetsPlugin = require('optimize-css-assets-webpack-plugin');
@@ -67,21 +67,15 @@ module.exports = {
         use: [{ loader: 'babel-loader' }]
       },
       {
-        test: /\.s?[ac]ss$/,
-        use: [
-          MiniCssExtractPlugin.loader,
-          'css-loader',
-          'postcss-loader',
-          'sass-loader'
-        ]
+        test: /\.css$/,
+        use: [MiniCssExtractPlugin.loader, 'css-loader']
       },
       {
         test: /\.html$/,
         use: [
           {
-            loader: 'html-srcsets-loader',
+            loader: 'html-loader',
             options: {
-              attrs: ['img:src', 'source:srcset'],
               minimize: true,
               removeAttributeQuotes: false
             }

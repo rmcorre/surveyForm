@@ -83,27 +83,28 @@ module.exports = {
         info: true
       }
     }),
-    new HtmlCriticalWebpackPlugin({
-      //Operates on file system therefore acts as a post build plugin
-      //Watch for css values that have a leading zero.
-      //Critical removes leading zeros from inlined styles which
-      //causes problems when extracting inlined styles from
-      //src css since styles don't match.
-      //Use with optimize-css-assets-webpack-plugin to remove
-      //leading zeros from src css.
-      base: path.resolve(__dirname, 'dist'),
-      src: 'index.html',
-      dest: 'index.html',
-      inline: true,
-      minify: true,
-      extract: true,
-      width: 375,
-      height: 575,
-      timeout: 40000,
-      penthouse: {
-        blockJSRequests: false
-      }
-    }),
+    //******** Had to disable because of penthouse issues ****************
+    // new HtmlCriticalWebpackPlugin({
+    //   //Operates on file system therefore acts as a post build plugin
+    //   //Watch for css values that have a leading zero.
+    //   //Critical removes leading zeros from inlined styles which
+    //   //causes problems when extracting inlined styles from
+    //   //src css since styles don't match.
+    //   //Use with optimize-css-assets-webpack-plugin to remove
+    //   //leading zeros from src css.
+    //   base: path.resolve(__dirname, 'dist'),
+    //   src: 'index.html',
+    //   dest: 'index.html',
+    //   inline: true,
+    //   minify: true,
+    //   extract: true,
+    //   width: 375,
+    //   height: 575,
+    //   timeout: 40000,
+    //   penthouse: {
+    //     blockJSRequests: false
+    //   }
+    // }),
     new CompressionWebpackPlugin({
       //Pre-compressing html here removes inlined styles emitted
       //by html-critical-webpack-plugin. Compress on the
